@@ -33,7 +33,7 @@ body {
 
 @keyframes zoom {
     0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+    50% { transform: scale(5); }
     100% { transform: scale(1); }
 }
 
@@ -47,12 +47,12 @@ body {
     padding-top: 2vw;
 }
 
-.navBar:hover, .situation span:hover {
+.navBar span:hover, .situation span:hover {
     color: #8d47e8;
 }
 
 .container {
-    margin-top: 5vw;
+    margin-top: 3.7vw;
     margin-left: 20vw;
     margin-right: 20vw;
     background-color: #000000;
@@ -156,5 +156,3 @@ body {
 .container.start .you img, .container.start .computer img {
     pointer-events: none;
 }
-
-
