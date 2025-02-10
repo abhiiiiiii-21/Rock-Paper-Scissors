@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(9, 9, 9);
+    color: white;
+    font-family: "Alkatra", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.startAnimation {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:  rgb(9, 9, 9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    animation: zoomOut 1s ease-out 2s forwards;
+}
+
+.startAnimation img {
+    width: 150px;
+    animation: zoom 1.5s ease-in-out;
+}
+
+@keyframes zoom {
+    0% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.2); 
+    }
+    100% { transform: scale(1); 
+    }
+}
+
+@keyframes zoomOut {
+    100% { 
+        transform: scale(0); opacity: 0; visibility: hidden; 
+    }
+}
+
+
+.navBar{
+    font-size: 3vw;
+    text-align: center;
+    padding-top: 2vw;
+}
+
+.navBar:hover, .situation p:hover{
+    color: #8d47e8;
+    cursor:none;
+}
+
+.container{
+    margin-top: 5vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    background-color: #000000;
+    border-radius: 3vw;
+    box-shadow: 4 5px 50px rgb(40, 40, 40);
+}
+
+.arena{
+    padding-bottom: 3vw;
+}
+
+.player{
+    display: flex;
+    justify-content: space-around;
+    font-size: 2vw;
+}
+
+.you img{
+    height: 15vw;
+    transform: rotate(90deg);
+}
+
+.you p, .computer p{
+    padding-left: 4vw;
+}
+
+.computer img{
+    height: 15vw;
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.situation{
+    padding: 2vw 0 2vw 0;
+    font-size: 3vw;
+    text-align: center;
+}
+
+
+.option_images{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.option:hover{
+    opacity: 1;
+}
+
+.option img{
+    width: 5vw;
+}
+
+.option p{
+    color: #7d2ae8;
+    margin-top: 1vw;
+    font-size: 1.6vw;
+    pointer-events: none;
+}
