@@ -105,6 +105,10 @@ body {
     cursor: pointer;
 }
 
+.container .start .option{
+    pointer-events: none;
+}
+
 .option:hover, .option.active {
     opacity: 1;
 }
@@ -118,4 +122,26 @@ body {
     margin-top: 1vw;
     font-size: 1.6vw;
     pointer-events: none;
+}
+
+.container .start .you{
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+
+@keyframes userShake {
+    50%{
+        transform: rotate(10deg);
+    }
+}
+
+.container .start .computer{
+    transform-origin: right;
+    animation: botShake 0.7s ease infinite;
+}
+
+@keyframes botShake {
+    50%{
+        transform: rotate(-10deg);
+    }
 }
